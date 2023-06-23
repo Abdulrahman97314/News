@@ -1,0 +1,73 @@
+﻿@model NewsViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h1>News</h1>
+
+    <form action="@Url.Action("Index", "Home")" method="get">
+        <div class="d-flex align-items-center">
+            <div class="flex-fill me-3">
+                <select asp-for="@Model.NewsSpecParams.Sort" class="form-control">
+                    <option value="PDateDesc">Publication Date (Newest to Oldest)</option>
+                    <option value="PDateAsc">Publication Date (Oldest to Newest)</option>
+                </select>
+            </div>
+
+            <div class="flex-fill me-3">
+                <input type="text" asp-for="@Model.NewsSpecParams.Search" value="@Model.NewsSpecParams.Search" class="form-control" placeholder="Search by News Title">
+            </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        @if (Model.PaginationData.Data.Count > 0)
+        {
+        <div class="row">
+    @foreach (var newsItem in Model.PaginationData.Data.Where(n => n.PublicationDate <=DateTime.Now))
+    {
+                    <div class="col-lg-3 col-md-4 col-sm-6 g-2">
+                        <div class="card">
+                            <a asp-action="Details" asp-route-id="@newsItem.Id">
+                                <img src="@newsItem.ImageUrl" class="w-100 text-truncate" height="300" alt="@newsItem.Title">
+                                <div class="card-body">
+                                    <h5 class="card-title">@newsItem.Title</h5>
+                                    <div class="text-muted mt-3">
+                                        <small>Published by @newsItem.Author.Name on @newsItem.PublicationDate.ToShortDateString()</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    }
+            </div>
+        }
+        else
+        {
+            <div class="text-center">
+                <p class="text-warning">
+                    No News found.
+                </p>
+            </div>
+        }
+        @if ((Model.PaginationData.Data.Where(n => n.PublicationDate <= DateTime.Now).Count() / Model.PaginationData.PageSize > 1))
+{
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            @if (Model.PaginationData.TotalPages > 1)
+                            {
+                                @for (int i = Math.Max(1, Model.NewsSpecParams.PageIndex - 4); i <= Math.Min(Model.PaginationData.TotalPages, Model.NewsSpecParams.PageIndex + 4); i++)
+                                {
+                                    <li class="page-item @(i == Model.NewsSpecParams.PageIndex ? "active" : "")">
+                                        <input class="page-link" asp-for="@Model.NewsSpecParams.PageIndex" value="@i" type="submit" />
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+}
+</form>
+</div>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+@model NewsDto
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">@Model.Title</h1>
+            <p class="card-text"><small class="text-muted">Published on @Model.PublicationDate</small></p>
+        </div>
+            <img src="@Model.ImageUrl" class="img-fluid" alt="@Model.Title" />
+        <p class="card-text p-5">@Html.Raw(Model.NewsContent)</p>
+        <div class="card-footer">
+            <p class="card-text">Author: @Model.Author.Name</a></p>
+        </div>
+    </div>
+</div>

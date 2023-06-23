@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/views/shared/adminpanal.cshtml";
+}
+@model AuthorViewModel
+<form action="@Url.Action("Index", "AuthorMvc")" method="get">
+<div class="container text-center">
+        <div class="d-flex justify-content-between align-items-center ">
+        <div>
+                <h2>Author List</h2>
+        </div>
+        <div>
+                <a asp-action="Create" class="btn btn-primary mt-3">Create new Author</a>
+        </div>
+    </div>
+
+    <hr />
+    <div class="d-flex align-items-center">
+            <div class="flex-fill me-3">
+            <select asp-for="@Model.AuthorSpecParams.Sort" class="form-control">
+                    <option value="">Sort</option>
+                    <option value="NameAsc">Alphabetical</option>
+                    <option value="NameDes">Reverse Alphabetical</option>
+            </select>
+        </div>
+            <label>PageSize : </label>
+
+        <div class="flex-fill me-3">
+            <input type="number" asp-for="@Model.AuthorSpecParams.PageSize" value="@Model.AuthorSpecParams.PageSize" min="1" max="50" class="form-control" placeholder="Page Size (Max 50)">
+        </div>
+
+        <div class="flex-fill me-3">
+            <input type="text" asp-for="@Model.AuthorSpecParams.Search" value="@Model.AuthorSpecParams.Search" class="form-control" placeholder="Search by News Title">
+        </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+
+    <hr />
+
+    @if (Model != null && Model.PaginationData.Data.Count > 0)
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var author in Model.PaginationData.Data)
+                {
+                    <tr>
+                        <td>@author.Id</td>
+                        <td>@author.Name</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@author.Id" class="btn btn-primary">Details</a>
+                        </td>
+                        <td> <a asp-action="Edit" asp-route-id="@author.Id" class="btn btn-warning">Edit</a></td>
+                        <td>
+                            <a asp-action="Delete" asp-route-id="@author.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            @if (Model.PaginationData.TotalPages > 1)
+                            {
+                                @for (int i = Math.Max(1, Model.AuthorSpecParams.PageIndex - 4); i <= Math.Min(Model.PaginationData.TotalPages, Model.AuthorSpecParams.PageIndex + 4); i++)
+                                {
+                                    <li class="page-item @(i == Model.AuthorSpecParams.PageIndex ? "active" : "")">
+                                        <input class="page-link" asp-for="@Model.AuthorSpecParams.PageIndex" value="@i" type="submit" />
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    }
+    else
+    {
+        <p>No authors found.</p>
+    }
+
+</div>
+</form>

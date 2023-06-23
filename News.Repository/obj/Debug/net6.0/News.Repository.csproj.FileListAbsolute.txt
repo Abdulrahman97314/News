@@ -1,0 +1,17 @@
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Repository.deps.json
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Repository.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Repository.pdb
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Core.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Core.pdb
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.csproj.AssemblyReference.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.AssemblyInfoInputs.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.AssemblyInfo.cs
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.csproj.CoreCompileInputs.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.csproj.CopyComplete
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\refint\News.Repository.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.pdb
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\ref\News.Repository.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\bin\Debug\net6.0\News.Repository.runtimeconfig.json
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Repository\obj\Debug\net6.0\News.Repository.genruntimeconfig.cache

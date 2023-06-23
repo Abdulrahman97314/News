@@ -1,0 +1,12 @@
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\bin\Debug\net6.0\News.Core.deps.json
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\bin\Debug\net6.0\News.Core.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\bin\Debug\net6.0\News.Core.pdb
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.csproj.AssemblyReference.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.AssemblyInfoInputs.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.AssemblyInfo.cs
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.csproj.CoreCompileInputs.cache
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\refint\News.Core.dll
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\News.Core.pdb
+C:\Users\abdo1\OneDrive\Desktop\New folder (3)\NewsApi\News.Core\obj\Debug\net6.0\ref\News.Core.dll
